@@ -1,6 +1,7 @@
+<html>
+<body>
 <?php 
 include_once "part_header.php"?>
-<?php include_once "part_main.php"?>
 <div style="padding=1%;">
 <?PHP
 $log=$_POST['name'];
@@ -12,7 +13,8 @@ if($result)
 {
 	if($result['access']=="admin")
 	{
-		include_once "i_admin.php";
+		echo "<input type='hidden'name='logo' value='logo'>";
+		include_once "admin_red.php";
 	}
 	else echo '<script>alert("Ошибка, доступ не админ");</script>';
 }
@@ -23,4 +25,5 @@ else
 }
 ?>
 </div>
-
+</body>
+</html>
